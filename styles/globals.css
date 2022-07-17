@@ -2,139 +2,139 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --white: #fff;
-  --black: #000;
-
-  --gray-050: #fafafa;
-  --gray-100: #ebebeb;
-  --gray-200: #e1e1e1;
-  --gray-300: #c1c1c1;
-  --gray-400: #a1a1a1;
-  --gray-500: #818181;
-  --gray-600: #616161;
-  --gray-700: #414141;
-  --gray-800: #2b2b2b;
-  --gray-850: #1a1a1a;
-  --gray-900: #111;
-
-  --red-050: snow;
-  --red-100: #ffe5e9;
-  --red-200: #fbbfc7;
-  --red-300: #ff909f;
-  --red-400: #ff7082;
-  --red-500: #ff455d;
-  --red-600: #d92038;
-  --red-700: #c11027;
-  --red-800: #8f0718;
-  --red-900: #341418;
-
-  --orange-050: #fff8f3;
-  --orange-100: #ffe8d8;
-  --orange-200: #ffc59b;
-  --orange-300: #fc9c66;
-  --orange-400: #fd812d;
-  --orange-500: #f35815;
-  --orange-600: #b83a05;
-  --orange-700: #962d00;
-  --orange-800: #672002;
-  --orange-900: #3c1403;
-
-  --yellow-050: #fffbe4;
-  --yellow-100: #fff1a8;
-  --yellow-200: #fed54a;
-  --yellow-300: #f2b600;
-  --yellow-400: #d19f03;
-  --yellow-500: #a78103;
-  --yellow-600: #7d5903;
-  --yellow-700: #5c4716;
-  --yellow-800: #41320c;
-  --yellow-900: #281e03;
-
-  --green-050: #effff3;
-  --green-100: #d7fbdf;
-  --green-200: #a9ecb8;
-  --green-300: #75db8c;
-  --green-400: #40d763;
-  --green-500: #27b648;
-  --green-600: #13862e;
-  --green-700: #19652a;
-  --green-800: #10481d;
-  --green-900: #0a2b13;
-
-  --blue-050: #f3fbff;
-  --blue-100: #ddf2ff;
-  --blue-200: #a9dffe;
-  --blue-300: #73c7f9;
-  --blue-400: #47b7f8;
-  --blue-500: #1e9de7;
-  --blue-600: #0b6ec5;
-  --blue-700: #144eb6;
-  --blue-800: #0e3682;
-  --blue-900: #08204e;
-
-  --purple-050: #f9f8ff;
-  --purple-100: #eeeaff;
-  --purple-200: #d4c9fe;
-  --purple-300: #b7a5fb;
-  --purple-400: #a18bf5;
-  --purple-500: #8467f3;
-  --purple-600: #5e49af;
-  --purple-700: #4b3990;
-  --purple-800: #3e1f75;
-  --purple-900: #27124a;
-}
-
-.light {
-  --bg-primary: var(--color-white);
-  --bg-primary-inverse: var(--color-gray-900);
-  --bg-secondary: var(--color-gray-050);
-  --bg-secondary-inverse: var(--color-gray-800);
-  --bg-green: var(--color-green-600);
-  --bg-green-light: var(--color-green-050);
-  --bg-yellow-light: var(--color-yellow-050);
-  --border-primary: var(--color-gray-100);
-  --border-secondary: var(--color-gray-200);
-  --border-green: var(--color-green-600);
-  --border-yellow-light: var(--color-yellow-200);
-  --text-primary: var(--color-gray-900);
-  --text-primary-inverse: var(--color-white);
-  --text-secondary: var(--color-gray-600);
-  --text-secondary-inverse: var(--color-gray-050);
-  --text-blue: var(--color-blue-600);
-  --text-green: var(--color-green-600);
-  --text-orange: var(--color-orange-600);
-  --text-red: var(--color-red-600);
-  --text-red-disabled: var(--color-red-300);
-  --text-purple: var(--color-purple-600);
-}
-
-.dark {
-  --bg-primary: var(--color-gray-900);
-  --bg-primary-inverse: var(--color-white);
-  --bg-secondary: var(--color-gray-850);
-  --bg-secondary-inverse: var(--color-gray-050);
-  --bg-green: var(--color-green-500);
-  --bg-green-light: var(--color-green-900);
-  --bg-yellow-light: var(--color-yellow-900);
-  --border-primary: var(--color-gray-800);
-  --border-secondary: var(--color-gray-700);
-  --border-green: var(--color-green-500);
-  --border-green-light: var(--color-green-700);
-  --border-yellow-light: var(--color-yellow-700);
-  --text-primary: var(--color-gray-050);
-  --text-primary-inverse: var(--color-gray-900);
-  --text-secondary: var(--color-gray-300);
-  --text-secondary-inverse: var(--color-gray-800);
-  --text-blue: var(--color-blue-400);
-  --text-green: var(--color-green-500);
-  --text-orange: var(--color-orange-300);
-  --text-red: var(--color-red-500);
-  --text-red-disabled: var(--color-red-700);
-  --text-purple: var(--color-purple-400);
-}
-
 @layer base {
+  :root {
+    --white: #fff;
+    --black: #000;
+
+    --gray-050: #fafafa;
+    --gray-100: #ebebeb;
+    --gray-200: #e1e1e1;
+    --gray-300: #c1c1c1;
+    --gray-400: #a1a1a1;
+    --gray-500: #818181;
+    --gray-600: #616161;
+    --gray-700: #414141;
+    --gray-800: #2b2b2b;
+    --gray-850: #1a1a1a;
+    --gray-900: #111;
+
+    --red-050: snow;
+    --red-100: #ffe5e9;
+    --red-200: #fbbfc7;
+    --red-300: #ff909f;
+    --red-400: #ff7082;
+    --red-500: #ff455d;
+    --red-600: #d92038;
+    --red-700: #c11027;
+    --red-800: #8f0718;
+    --red-900: #341418;
+
+    --orange-050: #fff8f3;
+    --orange-100: #ffe8d8;
+    --orange-200: #ffc59b;
+    --orange-300: #fc9c66;
+    --orange-400: #fd812d;
+    --orange-500: #f35815;
+    --orange-600: #b83a05;
+    --orange-700: #962d00;
+    --orange-800: #672002;
+    --orange-900: #3c1403;
+
+    --yellow-050: #fffbe4;
+    --yellow-100: #fff1a8;
+    --yellow-200: #fed54a;
+    --yellow-300: #f2b600;
+    --yellow-400: #d19f03;
+    --yellow-500: #a78103;
+    --yellow-600: #7d5903;
+    --yellow-700: #5c4716;
+    --yellow-800: #41320c;
+    --yellow-900: #281e03;
+
+    --green-050: #effff3;
+    --green-100: #d7fbdf;
+    --green-200: #a9ecb8;
+    --green-300: #75db8c;
+    --green-400: #40d763;
+    --green-500: #27b648;
+    --green-600: #13862e;
+    --green-700: #19652a;
+    --green-800: #10481d;
+    --green-900: #0a2b13;
+
+    --blue-050: #f3fbff;
+    --blue-100: #ddf2ff;
+    --blue-200: #a9dffe;
+    --blue-300: #73c7f9;
+    --blue-400: #47b7f8;
+    --blue-500: #1e9de7;
+    --blue-600: #0b6ec5;
+    --blue-700: #144eb6;
+    --blue-800: #0e3682;
+    --blue-900: #08204e;
+
+    --purple-050: #f9f8ff;
+    --purple-100: #eeeaff;
+    --purple-200: #d4c9fe;
+    --purple-300: #b7a5fb;
+    --purple-400: #a18bf5;
+    --purple-500: #8467f3;
+    --purple-600: #5e49af;
+    --purple-700: #4b3990;
+    --purple-800: #3e1f75;
+    --purple-900: #27124a;
+  }
+
+  .light {
+    --bg-primary: var(--purple-200);
+    --bg-primary-inverse: var(--gray-900);
+    --bg-secondary: var(--gray-050);
+    --bg-secondary-inverse: var(--gray-800);
+    --bg-green: var(--green-600);
+    --bg-green-light: var(--green-050);
+    --bg-yellow-light: var(--yellow-050);
+    --border-primary: var(--gray-100);
+    --border-secondary: var(--gray-200);
+    --border-green: var(--green-600);
+    --border-yellow-light: var(--yellow-200);
+    --text-primary: var(--gray-850);
+    --text-primary-inverse: var(--white);
+    --text-secondary: var(--gray-600);
+    --text-secondary-inverse: var(--gray-050);
+    --text-blue: var(--blue-600);
+    --text-green: var(--green-600);
+    --text-orange: var(--orange-600);
+    --text-red: var(--red-600);
+    --text-red-disabled: var(--red-300);
+    --text-purple: var(--purple-600);
+  }
+
+  .dark {
+    --bg-primary: var(--purple-800);
+    --bg-primary-inverse: var(--white);
+    --bg-secondary: var(--gray-850);
+    --bg-secondary-inverse: var(--gray-050);
+    --bg-green: var(--green-500);
+    --bg-green-light: var(--green-900);
+    --bg-yellow-light: var(--yellow-900);
+    --border-primary: var(--gray-800);
+    --border-secondary: var(--gray-700);
+    --border-green: var(--green-500);
+    --border-green-light: var(--green-700);
+    --border-yellow-light: var(--yellow-700);
+    --text-primary: var(--gray-050);
+    --text-primary-inverse: var(--gray-900);
+    --text-secondary: var(--gray-300);
+    --text-secondary-inverse: var(--gray-800);
+    --text-blue: var(--blue-400);
+    --text-green: var(--green-500);
+    --text-orange: var(--orange-300);
+    --text-red: var(--red-500);
+    --text-red-disabled: var(--red-700);
+    --text-purple: var(--purple-400);
+  }
+
   @font-face {
     font-family: "Inter var";
     src: url("/fonts/inter-roman.var.woff2") format("woff2");
@@ -150,22 +150,10 @@
   }
 
   body {
-    @apply text-sm;
+    @apply text-base;
+    @apply bg-primary;
+    @apply text-primary;
     @apply antialiased;
-  }
-
-  a {
-    @apply focus-visible-ring;
-    @apply break-words;
-  }
-
-  b,
-  strong {
-    @apply font-semibold;
-  }
-
-  select {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23737373' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
   }
 }
 
