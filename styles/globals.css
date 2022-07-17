@@ -86,55 +86,6 @@
     --purple-900: #27124a;
   }
 
-  .light {
-    --bg-primary: var(--purple-200);
-    --bg-primary-inverse: var(--gray-900);
-    --bg-secondary: var(--gray-050);
-    --bg-secondary-inverse: var(--gray-800);
-    --bg-green: var(--green-600);
-    --bg-green-light: var(--green-050);
-    --bg-yellow-light: var(--yellow-050);
-    --border-primary: var(--gray-100);
-    --border-secondary: var(--gray-200);
-    --border-green: var(--green-600);
-    --border-yellow-light: var(--yellow-200);
-    --text-primary: var(--gray-850);
-    --text-primary-inverse: var(--white);
-    --text-secondary: var(--gray-600);
-    --text-secondary-inverse: var(--gray-050);
-    --text-blue: var(--blue-600);
-    --text-green: var(--green-600);
-    --text-orange: var(--orange-600);
-    --text-red: var(--red-600);
-    --text-red-disabled: var(--red-300);
-    --text-purple: var(--purple-600);
-  }
-
-  .dark {
-    --bg-primary: var(--purple-800);
-    --bg-primary-inverse: var(--white);
-    --bg-secondary: var(--gray-850);
-    --bg-secondary-inverse: var(--gray-050);
-    --bg-green: var(--green-500);
-    --bg-green-light: var(--green-900);
-    --bg-yellow-light: var(--yellow-900);
-    --border-primary: var(--gray-800);
-    --border-secondary: var(--gray-700);
-    --border-green: var(--green-500);
-    --border-green-light: var(--green-700);
-    --border-yellow-light: var(--yellow-700);
-    --text-primary: var(--gray-050);
-    --text-primary-inverse: var(--gray-900);
-    --text-secondary: var(--gray-300);
-    --text-secondary-inverse: var(--gray-800);
-    --text-blue: var(--blue-400);
-    --text-green: var(--green-500);
-    --text-orange: var(--orange-300);
-    --text-red: var(--red-500);
-    --text-red-disabled: var(--red-700);
-    --text-purple: var(--purple-400);
-  }
-
   @font-face {
     font-family: "Inter var";
     src: url("/fonts/inter-roman.var.woff2") format("woff2");
@@ -151,8 +102,6 @@
 
   body {
     @apply text-base;
-    @apply bg-primary;
-    @apply text-primary;
     @apply antialiased;
   }
 }

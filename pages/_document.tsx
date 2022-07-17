@@ -16,7 +16,7 @@ class MyDocument extends Document {
           <link rel="icon" href="/vercel.svg" type="image/svg+xml" />
           <meta name="theme-color" content="#111" />
         </Head>
-        <body>
+        <body className="dark:bg-gray-900">
           <Main />
           <NextScript />
         </body>

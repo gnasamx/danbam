@@ -12,7 +12,7 @@ function ProjectIndex() {
             autoComplete="off"
             autoCorrect="off"
             autoCapitalize="none"
-            className="w-full rounded-md border px-3 shadow-sm ring-offset-0 text-primary h-8 py-1 text-base focus-ring border-secondary bg-secondary"
+            className="w-full rounded-md border px-3 shadow-sm ring-offset-0 text-primary h-8 py-1 text-base focus-ring bg-gray-50 dark:bg-gray-850 border-gray-200 dark:border-gray-700"
           />
         </div>
         <div className="mb-4 sm:mb-0">

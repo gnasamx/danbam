@@ -23,6 +23,7 @@ module.exports = {
         600: "var(--gray-600)",
         700: "var(--gray-700)",
         800: "var(--gray-800)",
+        850: "var(--gray-850)",
         900: "var(--gray-900)",
       },
       red: {
@@ -101,26 +102,6 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["Inter var", ...defaultTheme.fontFamily.sans],
-      },
-      backgroundColor: {
-        primary: "var(--bg-primary)",
-        "primary-inverse": "var(--bg-primary-inverse)",
-        secondary: "var(--bg-secondary)",
-        "secondary-inverse": "var(--bg-secondary-inverse)",
-      },
-      divideColor: {
-        primary: "var(--border-primary)",
-        secondary: "var(--border-secondary)",
-      },
-      textColor: {
-        primary: "var(--text-primary)",
-        "primary-inverse": "var(--text-primary-inverse)",
-        secondary: "var(--text-secondary)",
-        "secondary-inverse": "var(--text-secondary-inverse)",
-      },
-      borderColor: {
-        DEFAULT: "var(--border-primary)",
-        secondary: "var(--border-secondary)",
       },
       fontSize: {
         xs: ["10px", { letterSpacing: ".01em" }],
