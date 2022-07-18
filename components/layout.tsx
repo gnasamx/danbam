@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import * as React from "react";
@@ -38,6 +39,60 @@ export default function Layout({ children }: LayoutProps) {
                   </a>
                 </Link>
               </div>
+            </div>
+            <div className="flex flex-none items-center">
+              <details className="relative inline-flex">
+                <summary
+                  className="inline-flex  cursor-pointer rounded-full"
+                  aria-haspopup="true"
+                >
+                  <div
+                    title="Ganesh Pawar"
+                    className="relative inline-flex flex-shrink-0 rounded-full"
+                  >
+                    <Image
+                      src="/gravatar-fallback.png"
+                      alt="Ganesh Pawar"
+                      width={32}
+                      height={32}
+                      className="rounded-full object-cover"
+                    />
+                    <div className="absolute inset-0 rounded-full"></div>
+                  </div>
+                </summary>
+                <div className="absolute z-40 mt-2 w-60 rounded-lg bg-white dark:bg-gray-900 shadow-lg border border-gray-100 dark:shadow-black dark:border-gray-800 right-0 origin-top-right">
+                  <div className="py-2">
+                    <li className="list-none">
+                      <hr className="my-1 border-t border-t-gray-100 dark:border-t-gray-800" />
+                    </li>
+                    <li className="list-none">
+                      <form
+                        action="https://api.planetscale.com/internal/sessions"
+                        method="post"
+                      >
+                        <button
+                          type="submit"
+                          className="block w-full rounded-none px-6 py-2 text-left text-gray-850 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-850"
+                        >
+                          Sign out
+                        </button>
+                      </form>
+                    </li>
+                  </div>
+                  <div className="rounded-b-lg border-t border-t-gray-100 dark:border-t-gray-800 bg-gray-50 dark:bg-gray-850 py-3 px-6">
+                    <div className="flex items-stretch rounded-md border border-gray-200 dark:border-gray-700 text-gray-850 dark:text-white shadow-sm h-8">
+                      <label className="mb-0 flex select-none items-center space-x-1 whitespace-nowrap rounded-l-md border-r border-gray-200 dark:border-gray-700 bg-gray-050 dark:bg-gray-850 px-3 font-medium">
+                        <span>Theme</span>
+                      </label>
+                      <select className="text-base inline-block rounded bg-white dark:bg-gray-900 py-0  pl-4 pr-8 h-auto w-full rounded-l-none rounded-r-md border-none shadow-none">
+                        <option value="system">System</option>
+                        <option value="dark">Dark</option>
+                        <option value="light">Light</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </details>
             </div>
           </div>
           <div className="flex space-x-6 overflow-x-auto sm:space-x-0">
