@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import * as React from "react";
-import Logo from "./logo";
+import Logo from "./icons/logo";
 import { useTheme } from "next-themes";
 import { capitalize } from "@/lib/text";
 import { signOut, useSession } from "next-auth/react";

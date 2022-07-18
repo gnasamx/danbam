@@ -1,6 +1,6 @@
 import type { NextPageWithAuthAndLayout } from "@/lib/types";
 import type { AppProps } from "next/app";
-import "../styles/globals.css";
+import "../styles/application.css";
 import { ThemeProvider } from "next-themes";
 import { SessionProvider, signIn, useSession } from "next-auth/react";
 import React from "react";
