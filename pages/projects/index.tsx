@@ -28,6 +28,8 @@ function ProjectIndex() {
   );
 }
 
+ProjectIndex.auth = true;
+
 ProjectIndex.getLayout = function getLayout(page: React.ReactElement) {
   return <Layout>{page}</Layout>;
 };

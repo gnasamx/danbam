@@ -4,6 +4,7 @@ import "../styles/globals.css";
 import { ThemeProvider } from "next-themes";
 import { SessionProvider, signIn, useSession } from "next-auth/react";
 import React from "react";
+import { useRouter } from "next/router";
 
 type AppPropsWithAuthAndLayout = AppProps & {
   Component: NextPageWithAuthAndLayout;
@@ -30,11 +31,12 @@ function MyApp({
 
 function Auth({ children }: { children: React.ReactNode }) {
   const { data: session, status } = useSession();
+  const router = useRouter();
   const isUser = !!session?.user;
   React.useEffect(() => {
     if (status === "loading") return;
-    if (!isUser) signIn("github");
-  }, [isUser, status]);
+    if (!isUser) router.replace("/sign-in");
+  }, [isUser, router, status]);
 
   if (isUser) {
     return <>{children}</>;

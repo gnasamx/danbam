@@ -6,6 +6,7 @@ import * as React from "react";
 import Logo from "./logo";
 import { useTheme } from "next-themes";
 import { capitalize } from "@/lib/text";
+import { signOut, useSession } from "next-auth/react";
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -20,6 +21,7 @@ const navigationList = [
 
 export default function Layout({ children }: LayoutProps) {
   const router = useRouter();
+  const { data: session } = useSession();
   const { theme, themes, setTheme } = useTheme();
 
   return (
@@ -50,12 +52,12 @@ export default function Layout({ children }: LayoutProps) {
                   aria-haspopup="true"
                 >
                   <div
-                    title="Ganesh Pawar"
+                    title={session?.user?.name || ""}
                     className="relative inline-flex flex-shrink-0 rounded-full"
                   >
                     <Image
-                      src="/gravatar-fallback.png"
-                      alt="Ganesh Pawar"
+                      src={session?.user?.image || "/gravatar-fallback.png"}
+                      alt={session?.user?.name || "Profile image"}
                       width={32}
                       height={32}
                       className="rounded-full object-cover"
@@ -83,17 +85,13 @@ export default function Layout({ children }: LayoutProps) {
                       <hr className="my-2 border-t border-t-gray-100 dark:border-t-gray-800" />
                     </li>
                     <li className="list-none">
-                      <form
-                        action="https://api.planetscale.com/internal/sessions"
-                        method="post"
+                      <button
+                        type="button"
+                        onClick={() => signOut()}
+                        className="block w-full rounded-none px-6 py-2 text-left text-gray-850 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-850"
                       >
-                        <button
-                          type="submit"
-                          className="block w-full rounded-none px-6 py-2 text-left text-gray-850 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-850"
-                        >
-                          Sign out
-                        </button>
-                      </form>
+                        Sign out
+                      </button>
                     </li>
                   </div>
                   <div className="rounded-b-lg border-t border-t-gray-100 dark:border-t-gray-800 bg-gray-50 dark:bg-gray-850 py-3 px-6">
