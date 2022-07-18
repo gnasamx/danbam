@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import * as React from "react";
 import Logo from "./logo";
+import { useTheme } from "next-themes";
+import { capitalize } from "@/lib/text";
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -18,6 +20,7 @@ const navigationList = [
 
 export default function Layout({ children }: LayoutProps) {
   const router = useRouter();
+  const { theme, themes, setTheme } = useTheme();
 
   return (
     <div>
@@ -43,7 +46,7 @@ export default function Layout({ children }: LayoutProps) {
             <div className="flex flex-none items-center">
               <details className="relative inline-flex">
                 <summary
-                  className="inline-flex  cursor-pointer rounded-full"
+                  className="inline-flex cursor-pointer rounded-full hide-webkit-marker"
                   aria-haspopup="true"
                 >
                   <div
@@ -98,10 +101,20 @@ export default function Layout({ children }: LayoutProps) {
                       <label className="mb-0 flex select-none items-center space-x-1 whitespace-nowrap rounded-l-md border-r border-gray-200 dark:border-gray-700 bg-gray-050 dark:bg-gray-850 px-3 font-medium">
                         <span>Theme</span>
                       </label>
-                      <select className="text-base inline-block rounded bg-white dark:bg-gray-900 py-0  pl-4 pr-8 h-auto w-full rounded-l-none rounded-r-md border-none shadow-none">
-                        <option value="system">System</option>
-                        <option value="dark">Dark</option>
-                        <option value="light">Light</option>
+                      <select
+                        id="theme"
+                        name="theme"
+                        value={theme}
+                        onChange={(event) => {
+                          setTheme(event.target.value);
+                        }}
+                        className="text-base inline-block rounded bg-white dark:bg-gray-900 py-0  pl-4 pr-8 h-auto w-full rounded-l-none rounded-r-md border-none shadow-none"
+                      >
+                        {themes.map((theme) => (
+                          <option key={theme} value={theme}>
+                            {capitalize(theme)}
+                          </option>
+                        ))}
                       </select>
                     </div>
                   </div>
