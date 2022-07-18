@@ -5,6 +5,8 @@ const Index: NextPageWithAuthAndLayout = () => {
   return <p>PlanetScale Design System</p>;
 };
 
+Index.auth = true;
+
 Index.getLayout = function getLayout(page: React.ReactElement) {
   return <Layout>{page}</Layout>;
 };
