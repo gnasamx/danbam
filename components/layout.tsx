@@ -63,7 +63,21 @@ export default function Layout({ children }: LayoutProps) {
                 <div className="absolute z-40 mt-2 w-60 rounded-lg bg-white dark:bg-gray-900 shadow-lg border border-gray-100 dark:shadow-black dark:border-gray-800 right-0 origin-top-right">
                   <div className="py-2">
                     <li className="list-none">
-                      <hr className="my-1 border-t border-t-gray-100 dark:border-t-gray-800" />
+                      <Link href="/settings">
+                        <a className="block px-6 py-2 text-gray-850 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-850">
+                          Settings
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="list-none">
+                      <Link href="/support">
+                        <a className="block px-6 py-2 text-gray-850 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-850">
+                          Support
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="list-none">
+                      <hr className="my-2 border-t border-t-gray-100 dark:border-t-gray-800" />
                     </li>
                     <li className="list-none">
                       <form
