@@ -5,7 +5,7 @@
   @apply items-center;
   @apply justify-center;
   @apply text-center;
-  @apply h-button;
+  @apply h-8.5;
   @apply px-4;
   @apply no-underline;
   @apply leading-none;
@@ -27,9 +27,9 @@
 
 .btn-sm {
   @apply text-sm;
-  @apply py-1;
-  @apply h-button-sm;
-  @apply px-1.5;
+  @apply py-2;
+  @apply h-7.5;
+  @apply px-3;
 }
 
 .btn-primary {

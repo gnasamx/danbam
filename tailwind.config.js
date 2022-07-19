@@ -113,6 +113,10 @@ module.exports = {
         "3xl": ["24px", { letterSpacing: "-.46px" }],
         "4xl": ["28px", { letterSpacing: "-.21em" }],
       },
+      height: {
+        7.5: "1.875rem",
+        8.5: "2.125rem",
+      },
     },
   },
   variants: {
