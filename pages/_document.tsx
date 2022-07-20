@@ -3,7 +3,7 @@ import Document, { Head, Html, Main, NextScript } from "next/document";
 class MyDocument extends Document {
   render() {
     return (
-      <Html lang="en" className="light">
+      <Html lang="en">
         <Head>
           <link
             rel="preload"
@@ -16,7 +16,7 @@ class MyDocument extends Document {
           <link rel="icon" href="/vercel.svg" type="image/svg+xml" />
           <meta name="theme-color" content="#111" />
         </Head>
-        <body className="dark:bg-gray-900">
+        <body>
           <Main />
           <NextScript />
         </body>

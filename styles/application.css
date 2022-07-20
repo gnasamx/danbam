@@ -21,7 +21,6 @@
 
   body {
     @apply text-base;
-    @apply text-primary;
     @apply antialiased;
   }
 
@@ -49,8 +48,7 @@
   }
 
   .text-primary {
-    @apply text-gray-850;
-    @apply dark:text-white;
+    color: var(--text-primary);
   }
 
   .text-secondary {
@@ -59,17 +57,19 @@
   }
 
   .text-red {
-    @apply text-red-600;
-    @apply dark:text-red-500;
+    color: var(--text-red);
   }
 
   .bg-primary {
-    @apply bg-white;
-    @apply dark:bg-gray-900;
+    color: var(--bg-primary);
   }
 
   .bg-secondary {
     @apply bg-gray-50;
     @apply dark:bg-gray-850;
+  }
+
+  .border-primary {
+    color: var(--border-primary);
   }
 }

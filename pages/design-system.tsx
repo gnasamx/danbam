@@ -71,6 +71,11 @@ const DesignSystem = () => {
               <li className="space-y-2">
                 <p className="text-red">Lorem ipsum</p>
               </li>
+              <li>
+                <div className="w-20 h-20 bg-primary border-primary border-2">
+                  <p className="text-primary">Text primary</p>
+                </div>
+              </li>
             </ul>
           </div>
         </div>

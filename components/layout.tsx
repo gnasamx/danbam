@@ -75,9 +75,9 @@ export default function Layout({ children }: LayoutProps) {
                       </Link>
                     </li>
                     <li className="list-none">
-                      <Link href="/support">
+                      <Link href="/design-system">
                         <a className="block px-6 py-2 text-gray-850 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-850">
-                          Support
+                          Design system
                         </a>
                       </Link>
                     </li>
