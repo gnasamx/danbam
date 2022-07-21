@@ -51,21 +51,27 @@
 }
 
 .btn-secondary {
-  @apply text-primary;
-  @apply hover:bg-secondary;
+  @apply text-gray-850;
+  @apply dark:text-white;
+  @apply hover:bg-gray-50;
+  @apply dark:hover:bg-gray-850;
   @apply focus:border-blue-500;
   @apply border;
   @apply border-gray-200;
   @apply dark:border-gray-600;
-  @apply bg-primary;
+  @apply bg-white;
+  @apply dark:bg-gray-900;
 }
 
 .btn-danger {
-  @apply text-red;
-  @apply hover:bg-secondary;
+  @apply text-red-600;
+  @apply dark:text-red-500;
+  @apply hover:bg-gray-50;
+  @apply dark:hover:bg-gray-850;
   @apply focus:border-red-500;
   @apply border;
   @apply border-red-200;
   @apply dark:border-red-700;
-  @apply bg-primary;
+  @apply bg-white;
+  @apply dark:bg-gray-900;
 }

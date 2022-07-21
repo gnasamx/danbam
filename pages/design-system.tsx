@@ -26,7 +26,7 @@ const DesignSystem = () => {
               ))}
             </select>
           </div>
-          <div className="space-y-6">
+          <div className="space-y-8">
             <h2 className="text-xl font-semibold">Buttons</h2>
             <ul className="space-y-4">
               <li className="space-y-2">
@@ -60,21 +60,18 @@ const DesignSystem = () => {
                 <button className="btn btn-danger">Danger button</button>
               </li>
             </ul>
+            <h2 className="text-xl font-semibold">Typography</h2>
             <ul className="space-y-4">
-              <h2 className="text-xl font-semibold">Typography</h2>
               <li className="space-y-2">
-                <p className="text-primary">Lorem ipsum</p>
+                <p className="text-gray-850 dark:text-white">Text primary</p>
               </li>
               <li className="space-y-2">
-                <p className="text-secondary">Lorem ipsum</p>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Text secondary
+                </p>
               </li>
               <li className="space-y-2">
-                <p className="text-red">Lorem ipsum</p>
-              </li>
-              <li>
-                <div className="w-20 h-20 bg-primary border-primary border-2">
-                  <p className="text-primary">Text primary</p>
-                </div>
+                <p className="text-red-600 dark:text-red-500">Text red</p>
               </li>
             </ul>
           </div>

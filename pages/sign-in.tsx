@@ -32,7 +32,7 @@ const SignIn = ({
               <button
                 onClick={() => signIn(provider.id)}
                 type="button"
-                className="btn btn-secondary"
+                className="btn btn-primary"
               >
                 <Github />
                 {` Sign in with ${provider.name}`}

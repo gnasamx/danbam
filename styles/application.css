@@ -1,8 +1,8 @@
+@import "tailwindcss/base";
 @import "theme";
 @import "buttons";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 @layer base {
   @font-face {
@@ -45,31 +45,5 @@
     @apply dark:focus:ring-blue-800;
     @apply dark:focus:border-blue-500;
     @apply focus:shadow-none;
-  }
-
-  .text-primary {
-    color: var(--text-primary);
-  }
-
-  .text-secondary {
-    @apply text-gray-600;
-    @apply dark:text-gray-400;
-  }
-
-  .text-red {
-    color: var(--text-red);
-  }
-
-  .bg-primary {
-    color: var(--bg-primary);
-  }
-
-  .bg-secondary {
-    @apply bg-gray-50;
-    @apply dark:bg-gray-850;
-  }
-
-  .border-primary {
-    color: var(--border-primary);
   }
 }
