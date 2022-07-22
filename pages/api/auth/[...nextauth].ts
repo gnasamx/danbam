@@ -14,12 +14,9 @@ export const authOptions: NextAuthOptions = {
       userinfo: {
         url: "https://api.github.com/user",
         async request({ client, tokens }) {
-          console.log("client", client);
-          console.log("tokens", tokens);
+          // @ts-ignore
           const profile = await client.userinfo(tokens);
 
-          console.log("profile", profile);
-          // If user has email hidden, get their primary email from the GitHub API
           if (!profile.email) {
             const emails = await (
               await fetch("https://api.github.com/user/emails", {

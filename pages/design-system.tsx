@@ -74,6 +74,20 @@ const DesignSystem = () => {
                 <p className="text-red-600 dark:text-red-500">Text red</p>
               </li>
             </ul>
+            <h2 className="text-xl font-semibold">Form</h2>
+            <ul className="space-y-4">
+              <li className="space-y-2 w-80">
+                <p>Input</p>
+                <input type="text" value="Danbam" />
+              </li>
+              <li className="space-y-2 w-80">
+                <p>Select</p>
+                <select>
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                </select>
+              </li>
+            </ul>
           </div>
         </div>
       </main>
