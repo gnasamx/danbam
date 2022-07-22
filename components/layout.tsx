@@ -129,11 +129,11 @@ export default function Layout({ children }: LayoutProps) {
                       "whitespace-nowrap border-b pb-4 pt-2 leading-none text-gray-850 dark:text-white transition sm:px-4 border-transparent",
                       {
                         "border-blue-500 font-semibold":
-                          router.pathname === navigationItem.path,
+                          router.pathname.includes(navigationItem.path),
                       },
                       {
                         "hover:border-gray-300 dark:hover:border-gray-600":
-                          router.pathname !== navigationItem.path,
+                          router.pathname.includes(navigationItem.path),
                       }
                     )}
                   >
