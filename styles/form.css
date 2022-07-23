@@ -5,7 +5,7 @@ input[type="text"],
 input[type="search"],
 select {
   @apply bg-gray-50;
-  @apply dark:bg-gray-800;
+  @apply dark:bg-gray-850;
   @apply rounded-md;
   @apply py-1;
   @apply px-4;
@@ -16,8 +16,17 @@ select {
   @apply dark:border-gray-700;
   @apply shadow-sm;
   @apply text-base;
-  @apply h-8.5;
+  @apply h-8;
   @apply focus:bg-white;
   @apply dark:focus:bg-gray-900;
   @apply focus-ring;
+}
+
+label {
+  @apply inline-block;
+  @apply mb-3;
+  @apply leading-none;
+  @apply text-gray-850;
+  @apply dark:text-white;
+  @apply font-semibold;
 }

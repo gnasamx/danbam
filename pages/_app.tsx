@@ -15,7 +15,7 @@ function MyApp({
   pageProps: { session, ...pageProps },
 }: AppPropsWithAuthAndLayout) {
   const getLayout = Component.getLayout ?? ((page) => page);
-
+  
   return (
     <SessionProvider session={session} refetchOnWindowFocus={false}>
       <ThemeProvider attribute="class" disableTransitionOnChange>

@@ -2,7 +2,7 @@
 @import "theme";
 @import "tailwindcss/components";
 @import "buttons";
-@import "form";
+/* @import "form"; */
 @import "tailwindcss/utilities";
 
 @layer base {
@@ -48,3 +48,37 @@
     @apply focus:shadow-none;
   }
 }
+
+/*
+
+# Text Primary
+text-gray-850 dark:text-gray-50
+
+# Text Secondary
+text-gray-600 dark:text-gray-400
+
+# Text Red
+text-red-600 dark:text-red-500
+
+# Text purple
+text-purple-600 darl-text-purple-400
+
+-----------------------------------
+
+# Background Primary
+bg-white dark:bg-gray-900
+
+# Background Secondary
+bg-gray-50 dark:bg-gray-850
+
+-----------------------------------
+
+# Border Primary
+border-gray-100 dark:border-gray-800
+
+# Border Secondary
+border-gray-200 dark:border-gray-700
+
+-----------------------------------
+
+*/

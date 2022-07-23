@@ -64,6 +64,8 @@ const DesignSystem = () => {
             <ul className="space-y-4">
               <li className="space-y-2">
                 <p className="text-gray-850 dark:text-white">Text primary</p>
+                <p className="text-gray-850 dark:text-white">Text primary</p>
+                <p className="text-gray-850 dark:text-white">Text primary</p>
               </li>
               <li className="space-y-2">
                 <p className="text-gray-600 dark:text-gray-400">

@@ -112,7 +112,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-primary: var(--gray-900);
-    --bg-secondary: var(--gray-800);
+    --bg-secondary: var(--gray-850);
     --bg-tertiary: var(--gray-700);
     --border-primary: var(--gray-800);
     --border-secondary: var(--gray-700);

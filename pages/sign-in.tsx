@@ -30,7 +30,9 @@ const SignIn = ({
           {Object.values(providers!).map((provider) => (
             <div key={provider.name}>
               <button
-                onClick={() => signIn(provider.id)}
+                onClick={() =>
+                  signIn(provider.id, undefined, { role: "ADMIN" })
+                }
                 type="button"
                 className="btn btn-primary"
               >
