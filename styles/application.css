@@ -1,9 +1,6 @@
-@import "tailwindcss/base";
-@import "theme";
-@import "tailwindcss/components";
-@import "buttons";
-/* @import "form"; */
-@import "tailwindcss/utilities";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
   @font-face {
