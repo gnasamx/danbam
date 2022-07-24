@@ -78,4 +78,14 @@ model Project {
   userId    String
   client    Client   @relation(fields: [clientId], references: [id], onDelete: Cascade)
   clientId  String
+  tasks     Task[]
+}
+
+model Task {
+  id        String   @id @default(cuid())
+  name      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  project   Project? @relation(fields: [projectId], references: [id])
+  projectId String?
 }
