@@ -2,8 +2,8 @@ import Layout from "@/components/layout";
 import { useForm, SubmitHandler } from "react-hook-form";
 
 type Inputs = {
-  project_name: string;
-  client_name: string;
+  projectName: string;
+  clientName: string;
 };
 
 function ProjectNew() {
@@ -14,20 +14,20 @@ function ProjectNew() {
     formState: { errors },
   } = useForm<Inputs>({
     defaultValues: {
-      project_name: "",
-      client_name: "",
+      projectName: "",
+      clientName: "",
     },
   });
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     console.log(data);
-    fetch("/api/project/create", {
+    fetch("/api/project", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        projectName: data.project_name,
-        clientName: data.client_name,
+        projectName: data.projectName,
+        clientName: data.clientName,
       }),
     });
     reset();
@@ -46,40 +46,37 @@ function ProjectNew() {
           <div className="space-y-6">
             <fieldset>
               <label
-                htmlFor="project_name"
+                htmlFor="projectName"
                 className="inline-block mb-3 leading-none text-gray-850 dark:text-white font-semibold"
               >
                 Project name
               </label>
               <input
                 type="text"
-                id="project_name"
+                id="projectName"
                 autoComplete="off"
                 autoCorrect="off"
                 autoCapitalize="none"
                 required
-                {...register("project_name")}
+                {...register("projectName")}
                 className="w-full rounded-md border px-3 shadow-sm ring-offset-0 text-gray-850 dark:text-white h-8 py-1 text-base focus-ring border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900"
               />
-              {errors["project_name"] && (
-                <p>{errors["project_name"].message}</p>
-              )}
             </fieldset>
             <fieldset>
               <label
-                htmlFor="client_name"
+                htmlFor="clientName"
                 className="inline-block mb-3 leading-none text-gray-850 dark:text-white font-semibold"
               >
                 Client name
               </label>
               <input
                 type="text"
-                id="client_name"
+                id="clientName"
                 autoComplete="off"
                 autoCorrect="off"
                 autoCapitalize="none"
                 required
-                {...register("client_name")}
+                {...register("clientName")}
                 className="w-full rounded-md border px-3 shadow-sm ring-offset-0 text-gray-850 dark:text-white h-8 py-1 text-base focus-ring border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900"
               />
             </fieldset>

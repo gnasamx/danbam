@@ -21,8 +21,12 @@ export default async function handler(
   if (session) {
     const result = await prisma?.project.create({
       data: {
-        projectName,
-        clientName,
+        name: projectName,
+        client: {
+          create: {
+            name: clientName,
+          },
+        },
         user: { connect: { email: session.user?.email as string } },
       },
     });

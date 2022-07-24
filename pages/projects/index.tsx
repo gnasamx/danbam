@@ -1,9 +1,14 @@
 import Layout from "@/components/layout";
+import { GetServerSidePropsContext } from "next";
+import { Session, unstable_getServerSession } from "next-auth";
 import Link from "next/link";
+import { authOptions } from "pages/api/auth/[...nextauth]";
+import { prisma } from "@/lib/prisma";
+import { Project } from "@prisma/client";
 
 const headings: Array<string> = ["Project", "Client"];
 
-function ProjectIndex() {
+function ProjectIndex({ projects }) {
   return (
     <>
       <div className="mb-8 flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between">
@@ -37,7 +42,7 @@ function ProjectIndex() {
                 <th
                   key={heading}
                   scope="col"
-                  className="text-gray-600 dark:text-gray-400 text-left text-sm font-medium tracking-normal px-4 py-2 border-t border-b bg-gray-50 dark:bg-gray-850 first:border-l first:rounded-l-md last:border-r last:rounded-r-md"
+                  className="text-gray-600 dark:text-gray-400 text-left text-sm font-medium tracking-normal px-4 py-2 border-t border-b border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-850 first:border-l first:rounded-l-md last:border-r last:rounded-r-md"
                 >
                   {heading}
                 </th>
@@ -45,14 +50,16 @@ function ProjectIndex() {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td className="text-left p-4 border-b whitespace-nowrap py-3 text-purple-600 darl-text-purple-400">
-                PlanetScale Database Design
-              </td>
-              <td className="text-left p-4 border-b whitespace-nowrap py-3">
-                PlanetScale Org
-              </td>
-            </tr>
+            {projects.map((project: Project) => (
+              <tr key={project.id}>
+                <td className="text-left p-4 border-b border-gray-100 dark:border-gray-800 whitespace-nowrap py-3 text-purple-600 dark:text-purple-400">
+                  {project.name}
+                </td>
+                <td className="text-left p-4 border-b border-gray-100 dark:border-gray-800 whitespace-nowrap py-3">
+                  {project.client.name}
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
@@ -64,6 +71,46 @@ ProjectIndex.auth = true;
 
 ProjectIndex.getLayout = function getLayout(page: React.ReactElement) {
   return <Layout>{page}</Layout>;
+};
+
+export const getServerSideProps = async (
+  context: GetServerSidePropsContext
+) => {
+  const session = await unstable_getServerSession(
+    context.req,
+    context.res,
+    authOptions
+  );
+
+  if (!session?.user) {
+    return {
+      redirect: {
+        permanent: true,
+        destination: "/sign-in",
+      },
+    };
+  }
+
+  let projects = await prisma?.project.findMany({
+    where: {
+      userId: session.user.id,
+    },
+    include: {
+      client: true,
+    },
+  });
+
+  projects = JSON.parse(JSON.stringify(projects));
+
+  console.log(projects);
+
+  return {
+    props: { projects },
+  };
+
+  return {
+    props: {},
+  };
 };
 
 export default ProjectIndex;

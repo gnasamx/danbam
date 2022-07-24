@@ -61,12 +61,21 @@ enum Role {
   MEMBER
 }
 
+model Client {
+  id        String    @id @default(cuid())
+  name      String
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  projects  Project[]
+}
+
 model Project {
-  id          String   @id @default(cuid())
-  projectName String
-  clientName  String
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  userId      String
+  id        String   @id @default(cuid())
+  name      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String
+  client    Client   @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  clientId  String
 }
